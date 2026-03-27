@@ -25,11 +25,6 @@ app.get('/otraBienvenida', (req, res) => {
 
 app.use(express.json());
 
-app.post('/api/otro', (req, res) => {
-console.log('El cuerpo de la petición: ', req.body );
-res.sendStatus(200);
-});
-
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
     console.log('Up and up');
