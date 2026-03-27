@@ -27,6 +27,14 @@ app.get('/bienvenida', (req, res) => {
 app.get('/otraBienvenida', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'bienvenida.html'));
 });
+//Funcion para el ejercicio 11
+app.delete('/publicacion/:id', (req, res) => {
+    const idMascota = req.params.id;
+    res.status(200).json({
+        mensaje: `La publicación con ID ${idMascota} ha sido eliminada con éxito.`,
+        motivo: "Mascota recuperada por su dueño"
+    });
+});
 
 app.use(express.json());
 
